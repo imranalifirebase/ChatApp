@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.LoginActivity">
+
+    <include
+        android:id="@+id/toolbar_login_activity"
+        layout="@layout/mytoolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.rilixtech.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        app:ccp_defaultNameCode="PK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText_code_login_activity" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputEditText_muber_login_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ccp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcom_message_login_screen">
+
+        <EditText
+            android:id="@+id/edit_phone_number_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Number"
+            android:text="3001234567" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/btn_login_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="120dp"
+
+        android:padding="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText_muber_login_activity">
+
+        <Button
+            android:id="@+id/btn_login_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="Log In"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <!--////////////////////////////////////////////////////////-->
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputEditText_code_login_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcom_message_login_screen">
+
+        <EditText
+            android:id="@+id/edit_code_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Code"
+            android:text="123456" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/btn_done_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText_code_login_activity">
+
+        <Button
+            android:id="@+id/btn_done_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="Code"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+    <!--<EditText
+        android:id="@+id/edit_code_login_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="number"
+        android:visibility="gone"
+        android:text="123456"
+        android:hint="Enter Code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_login_activity" />-->
+
+    <!--<android.support.v7.widget.CardView
+        android:id="@+id/btn_done_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_code_login_activity">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_done_login_activity"
+            android:background="@color/colorPrimary"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+
+    </android.support.v7.widget.CardView>-->
+
+    <TextView
+        android:id="@+id/txt_welcom_message_login_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Welcome To DApp"
+        android:textSize="18sp"
+        android:textColor="@color/primaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_login_activity" />
+
+</android.support.constraint.ConstraintLayout>
